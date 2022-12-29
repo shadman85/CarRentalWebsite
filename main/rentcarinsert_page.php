@@ -1,0 +1,125 @@
+<?php
+require_once 'companyTimeout.php';
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to bottom right, blue, violet);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+      
+        
+        .container {
+            padding: 16px;
+            background-color: white;
+            margin: 0px 400px 0px 400px;
+        }
+        
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+        
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+        
+        .registerbtn {
+            background-color: #4a0b4f;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        
+        .registerbtn:hover {
+            opacity: 1;
+        }
+       
+        
+        a {
+            color: dodgerblue;
+        }
+       
+        
+        .signin {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <form action="rentcarinsert.php" method="POST" enctype="multipart/form-data">
+        <div class="container">
+            <h1 align="center" >Insert New Car for Rent</h1>
+           
+            <label for="insadminpassword" ><b style="color:red">Company Password :</b></label>
+            <input type="password" placeholder="You must enter adminpassword :" name="insadminpassword" id="insadminpassword" required>
+
+            <label for="rentcarID"><b>Car ID :</b></label>
+            <input type="text" placeholder="Enter Car ID :" name="rentcarID" id="rentcarID" required>
+
+            <label for="rentcarModel"><b>Car Model:</b></label>
+            <input type="text" placeholder="Enter Car Model :" name="rentcarModel" id="rentcarModel" required>
+
+            <label for="rentcarBrand"><b>Brand :</b></label>
+            <input type="text" placeholder="Enter Car Brand :" name="rentcarBrand" id="rentcarBrand" required>
+
+            <label for="startDate"><b>Start of available date:</b></label>
+            <input type="text" placeholder="Enter start of available date :" name="startDate" id="startDate" required>
+
+            <label for="endDate"><b>End of available date:</b></label>
+            <input type="text" placeholder="Enter end of available date :" name="endDate" id="endDate" required>
+        
+
+            <label for="cost_per_hour"><b>Cost-per-hour :</b></label>
+            <input type="text" placeholder="Enter cost-per-hour" name="cost_per_hour" id="cost_per_hour" required>
+
+            <label for="status"><b>Rent Car Status :</b></label>
+            <input type="text" placeholder="write Available or booked" name="status" id="status" required>
+
+  
+            
+            <label>Select Image File:</label>
+            <input type="file" name="image">
+            <input type="submit" name="submit_img" value="Upload">
+
+            <!--<button type="submit" class="registerbtn" name="rentinsert_submit" >Submit</button>-->
+          
+        </div>
+
+
+    </form>
+
+</body>
+
+</html>
